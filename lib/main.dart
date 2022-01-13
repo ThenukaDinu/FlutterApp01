@@ -11,19 +11,30 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-          appBar: AppBar(
-            backgroundColor: Colors.green,
-            title: const Text('Flutter is fun'),
+        appBar: AppBar(
+          title: const Text(
+            'My first app',
           ),
-          body: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            crossAxisAlignment: CrossAxisAlignment.end,
-            children: const [
-              Icon(Icons.backpack),
-              Icon(Icons.leaderboard),
-              Icon(Icons.person)
-            ],
-          )),
+          centerTitle: true,
+          backgroundColor: Colors.red[600],
+        ),
+        body: Center(
+          child: Text(
+            'Hello Ninjas!',
+            style: TextStyle(
+                fontSize: 20.0,
+                fontWeight: FontWeight.bold,
+                letterSpacing: 2.0,
+                color: Colors.grey[600],
+                fontFamily: 'IndieFlower'),
+          ),
+        ),
+        floatingActionButton: FloatingActionButton(
+          child: Text('click'),
+          onPressed: () => {},
+          backgroundColor: Colors.red[600],
+        ),
+      ),
     );
   }
 }
